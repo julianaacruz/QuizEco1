@@ -3,7 +3,6 @@ package com.example.quizeco1;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
@@ -15,7 +14,7 @@ public class Registro extends AppCompatActivity {
     private Button buttonContinuar;
     private TextView instruccionesRegistro, tituloRegistro;
     private EditText identificacion, nombre;
-    private boolean vacio;
+    private boolean vacio, igual;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,8 +30,8 @@ public class Registro extends AppCompatActivity {
         buttonContinuar.setOnClickListener(
                 (v)-> {
                     boolean vacio = nombre.getText().toString().isEmpty() || identificacion.getText().toString().isEmpty();
-
-                    if (vacio){
+                    readData();
+                    if (vacio || igual){
                         Log.e(">>>", ""+vacio);
                     }else{
                     String usuario = nombre.getText().toString();
@@ -48,7 +47,11 @@ public class Registro extends AppCompatActivity {
 
     }
 
-    public void saveData(){
-        SharedPreferences preferences = getSharedPreferences("data", MODE_PRIVATE);
+    public boolean readData(){
+        String datos = getSharedPreferences("datos", MODE_PRIVATE).getString("usuarios", "No hay datos almacenados");
+        if(datos.contains(identificacion.getText().toString())){
+            igual = true;
+        }
+        return igual;
     }
 }

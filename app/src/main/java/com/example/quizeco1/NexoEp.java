@@ -34,6 +34,8 @@ public class NexoEp extends AppCompatActivity {
         buttonContinuar2.setOnClickListener(
                 (v)-> {
 
+                    puntaje();
+
                     if (checkBox1.isChecked() || checkBox2.isChecked() || checkBox3.isChecked() || checkBox4.isChecked() || checkBox5.isChecked() ){
 
                         Intent a = new Intent(this,Sintomas.class);
@@ -48,16 +50,16 @@ public class NexoEp extends AppCompatActivity {
 
     public void puntaje(){
         if(checkBox1.isChecked()){
-            puntajeRiesgo +=4;
+            puntajeRiesgo +=3;
         }
         if(checkBox2.isChecked()){
-            puntajeRiesgo +=4;
+            puntajeRiesgo +=3;
         }
         if(checkBox3.isChecked()){
-            puntajeRiesgo +=4;
+            puntajeRiesgo +=3;
         }
         if(checkBox4.isChecked()){
-            puntajeRiesgo +=4;
+            puntajeRiesgo +=3;
         }
         if(checkBox5.isChecked()){
             puntajeRiesgo =0;

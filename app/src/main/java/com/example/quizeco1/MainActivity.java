@@ -30,7 +30,14 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void loadData(){
+    @Override
+    protected void onResume() {
+        super.onResume();
+        loadData();
+    }
 
+    private void loadData(){
+        String datos = getSharedPreferences("datos", MODE_PRIVATE).getString("usuarios", "No hay datos almacenados");
+        lista.setText(datos);
     }
 }

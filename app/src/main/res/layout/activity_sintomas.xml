@@ -6,4 +6,98 @@
     android:layout_height="match_parent"
     tools:context=".Sintomas">
 
+    <TextView
+        android:id="@+id/titulosSintomas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="45dp"
+        android:text="Síntomas"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/instruccionesSintomas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Elige las opciones que apliquen a tu caso:"
+        app:layout_constraintStart_toStartOf="@+id/titulosSintomas"
+        app:layout_constraintTop_toBottomOf="@+id/titulosSintomas" />
+
+    <CheckBox
+        android:id="@+id/checkBox7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Dolor de garganta"
+        app:layout_constraintStart_toStartOf="@+id/instruccionesSintomas"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox6" />
+
+    <CheckBox
+        android:id="@+id/checkBox12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Congestión nasal"
+        app:layout_constraintStart_toStartOf="@+id/instruccionesSintomas"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox7" />
+
+    <CheckBox
+        android:id="@+id/checkBox6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Fiebre"
+        app:layout_constraintStart_toStartOf="@+id/instruccionesSintomas"
+        app:layout_constraintTop_toBottomOf="@+id/instruccionesSintomas" />
+
+    <CheckBox
+        android:id="@+id/checkBox8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Tos"
+        app:layout_constraintStart_toStartOf="@+id/checkBox12"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox12" />
+
+    <CheckBox
+        android:id="@+id/checkBox9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Fatiga"
+        app:layout_constraintStart_toStartOf="@+id/checkBox8"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox8" />
+
+    <CheckBox
+        android:id="@+id/checkBox10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Dificultad para respirar"
+        app:layout_constraintStart_toStartOf="@+id/checkBox9"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox9" />
+
+    <CheckBox
+        android:id="@+id/checkBox11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Ninguno"
+        app:layout_constraintStart_toStartOf="@+id/checkBox10"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox10" />
+
+    <Button
+        android:id="@+id/buttonFin"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#8DD9C7"
+        android:text="Finalizar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox11" />
 </androidx.constraintlayout.widget.ConstraintLayout>
