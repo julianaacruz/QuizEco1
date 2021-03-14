@@ -30,8 +30,8 @@ public class Registro extends AppCompatActivity {
         buttonContinuar.setOnClickListener(
                 (v)-> {
                     boolean vacio = nombre.getText().toString().isEmpty() || identificacion.getText().toString().isEmpty();
-                    readData();
-                    if (vacio || igual){
+                    //readData();
+                    if (vacio){
                         Log.e(">>>", ""+vacio);
                     }else{
                     String usuario = nombre.getText().toString();
